@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import '../../css/style.css'
 
 class Form extends Component {
   constructor() {
     super();
-
     this.state = {
       value: ""
     };
@@ -24,6 +24,7 @@ class Form extends Component {
   render() {
     return (
       <form>
+        <h1>React Webpack Setup</h1>
         <input
           type="text"
           value={this.state.value}
