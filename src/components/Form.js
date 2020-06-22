@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import '../css/style.css'
+import { Button, DatePicker, version } from "antd";
+// import "antd/dist/antd.css";
+
 
 class Form extends Component {
   constructor() {
@@ -23,22 +26,14 @@ class Form extends Component {
 
   render() {
     return (
-      <form>
-        <h1>React Webpack Setup</h1>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-        /> <input
-        type="text"
-        value={this.state.value}
-        onChange={this.handleChange}
-      /> <input
-      type="text"
-      value={this.state.value}
-      onChange={this.handleChange}
-    />
-      </form>
+      <div>
+          <h1>antd version: {version}</h1>
+    <DatePicker />
+    <Button type="primary" style={{ marginLeft: 8 }}>
+      Primary Button
+    </Button>
+
+      </div>
     );
   }
 }
